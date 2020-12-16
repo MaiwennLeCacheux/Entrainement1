@@ -64,4 +64,55 @@ public class TestZoo{
 
 	}
 	
+	@Test
+	public void testComparatorPositif() throws AnimalDansMauvaisSecteurException {
+		Throwable e = null;
+		Secteur s1 = new Secteur(TypeAnimal.CHIEN);
+		Secteur s2 = new Secteur(TypeAnimal.CHAT);
+		
+		s1.ajouterAnimal(new Chien("bob"));
+		s1.ajouterAnimal(new Chien("bub"));
+		s1.ajouterAnimal(new Chien("bib"));
+		s2.ajouterAnimal(new Chat("juju"));
+		
+		SecteurComparator sc = new SecteurComparator();
+
+		assertEquals(2,sc.compare(s1, s2));
+
+	}
+	
+	@Test
+	public void testComparatorZero() throws AnimalDansMauvaisSecteurException {
+		Throwable e = null;
+		Secteur s1 = new Secteur(TypeAnimal.CHIEN);
+		Secteur s2 = new Secteur(TypeAnimal.CHAT);
+		
+		s1.ajouterAnimal(new Chien("bob"));
+		s1.ajouterAnimal(new Chien("bub"));
+		s2.ajouterAnimal(new Chat("bib"));
+		s2.ajouterAnimal(new Chat("juju"));
+		
+		SecteurComparator sc = new SecteurComparator();
+
+		assertEquals(0,sc.compare(s1, s2));
+
+	}
+	
+	@Test
+	public void testComparatorNegatif() throws AnimalDansMauvaisSecteurException {
+		Throwable e = null;
+		Secteur s1 = new Secteur(TypeAnimal.CHIEN);
+		Secteur s2 = new Secteur(TypeAnimal.CHAT);
+		
+		s1.ajouterAnimal(new Chien("bob"));
+		s2.ajouterAnimal(new Chat("bub"));
+		s2.ajouterAnimal(new Chat("bib"));
+		s2.ajouterAnimal(new Chat("juju"));
+		
+		SecteurComparator sc = new SecteurComparator();
+
+		assertEquals(-2,sc.compare(s1, s2));
+
+	}
+	
 }

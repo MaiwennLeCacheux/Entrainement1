@@ -1,0 +1,10 @@
+<Zoo>
+  <visiteurs>3</visiteurs>
+  <secteursAnimaux>
+    <Secteur>
+      <typeAnimauxDansSecteur>CHIEN</typeAnimauxDansSecteur>
+      <animauxDansSecteur/>
+    </Secteur>
+  </secteursAnimaux>
+  <name>zoo</name>
+</Zoo>

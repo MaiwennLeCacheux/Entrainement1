@@ -4,12 +4,31 @@
   <artifactId>TP1_ZOO</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-    <dependencies>
+<dependencies>
 	 <dependency>
 	  <groupId>junit</groupId>
 	  <artifactId>junit</artifactId>
 	  <version>4.13</version>
 	  <scope>test</scope>
-	 </dependency>
+   </dependency>
+   <dependency>
+   		<groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-core</artifactId>
+	    <version>2.14.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+	<dependency>
+	  <groupId>org.apache.logging.log4j</groupId>
+	  <artifactId>log4j-api</artifactId>
+	  <version>2.14.0</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.thoughtworks.xstream</groupId>
+	  <artifactId>xstream</artifactId>
+	  <version>1.4.14</version>
+	</dependency>
+
+
   </dependencies>
+
 </project>
